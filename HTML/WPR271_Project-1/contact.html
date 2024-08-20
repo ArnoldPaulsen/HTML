@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body{
+            min-height: 100vh;
+            width: 100%;
+            background: #a10e0e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        container{
+            width: 80%;
+            background: #ffffff;
+            border-radius: 6px;
+            padding: 30px 60px 40px 40px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .container .content{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .container .content .left-side{
+            width: 25%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            position: relative;
+        }
+
+        .content .left-side::before{
+            content: '';
+            position: absolute;
+            height: 70%;
+            width: 2px;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgb(255, 255, 255);
+
+        }
+
+        .content .left-side .details{
+            margin: 14px;
+            text-align: center;
+        }
+
+        .content .left-side .details i{
+            font-size: 30px;
+            color: rgb(44, 44, 39);
+            margin-bottom: 10px;
+
+        }
+
+        .content .left-side .details .topic{
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .content .left-side .details .text-one,
+        .content .left-side .details .text-two{
+            font-size: 16px;
+            color: #000000;
+        }
+
+        .container .content .right-side{
+            width: 75%;
+        }
+
+        .content .right-side .topic-text{
+            font-size: 23px;
+            font-weight: 600;
+            color:  rgb(0, 0, 0);
+        }
+
+        .right-side  .input-box{
+            height: 50px;
+            width: 100%;
+            margin: 12px 0;
+        }
+
+        .right-side  .input-box input,
+        .right-side  .input-box textarea{
+            height: 100%;
+            width: 100%;
+            border: none;
+            font-size: 16px;
+            background: #F0F1F8;
+            border-radius: 6px;
+            padding: 0 15px;
+            resize: none;
+        }
+
+        .right-side .message-box{
+            min-height: 110px;
+            margin-top: 6px;
+
+        }
+
+        .right-side .button{
+            display: inline-block;
+            margin-top: 6px;
+        }
+
+        .right-side .button input[type="button"]{
+            color: #000000;
+            font-size: 25px;
+            outline: none;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 10px;
+            background:  rgb(2, 2, 2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button input[type="button"]:hover{
+            background: rgba(160, 160, 78, 0.568);
+        }
+
+        @media (max-width: 950px){
+            .container{
+            width: 90%;
+            padding: 30px 60px 40px 40px;
+            
+        }
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <div class="container">
+        <div class="content">
+            <div class="left-side">
+                <div class="address details">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="topic">Address</div>
+                    <div class="text-one">138 Berg Ave, </div>
+                    <div class="text-two">Heatherdale AH Akasia, 0182</div>
+                </div>
+                <div class="phone details">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="topic">Phone</div>
+                    <div class="text-one">0685500830</div>
+                    <div class="text-two">011 567 6230</div>
+                </div>
+                <div class="email details">
+                    <i class="fas fa-envelope"></i>
+                    <div class="topic">Email</div>
+                    <div class="text-one">info@belgiumcampus.ac.za</div>
+                    <div class="text-two">info@belgiumcampus.ac.za</div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="topic-text">Send us a message</div>
+                <p>If you have any types of quiries related to the enrollment, you can send us a message from here. Its out pleasure to help you</p>
+            
+            <form action="">
+                <div class="input-box">
+                    <input type="text" placeholder="Enter your name">
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Enter your email">
+                </div>
+                <div class="input-box message-box">
+                    <textarea></textarea>
+                </div>
+                <div class="button">
+                    <input type="button" placeholder="Send now">
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

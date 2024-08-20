@@ -1,0 +1,250 @@
+<html>
+  <head>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Muli:300,400,700,900');
+
+* {
+  box-sizing:  border-box;
+}
+
+:root {
+  --clr-primary: #5c80bc;
+  --clr-accent: #e8c547;
+  --clr-gray: #4d5061;
+  --clr-dark: #30323d;
+  
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
+  background: var(--clr-dark);
+  color: rgba(255,255,255,.95);
+}
+
+
+.btn {
+  margin-top: 1em;
+  padding: .5em 1.25em;
+  border: 0;
+  background-color: var(--clr-accent);
+}
+
+.btn:hover {
+  opacity: .8;
+}
+
+nav {
+  background: var(--clr-gray);
+  padding: 1em 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a {
+  display: inline-block;
+  padding: .5em;
+  color: inherit;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--clr-accent);
+}
+
+.hero {
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+  background-image: url(https://unsplash.it/900/?blur);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.hero__title {
+  font-size: calc(6vw + 2rem);
+  text-shadow: 0 0 .5rem rgba(0,0,0,.3);
+}
+
+.portfolio {
+  padding: 5em 0;
+  display: grid;
+  gap: 1em;
+  grid: auto / repeat(auto-fit, minmax(300px, 1fr));
+  width: 95%;
+  margin: -10em auto 0;
+  position: relative;
+  // z-index: 1;
+}
+
+.portfolio__item {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.portfolio__img {
+  max-width: 100%;
+}
+
+.portfolio__figcaption {
+  position: absolute;
+  background: rgba(0, 0, 0, .5);
+  bottom: 0;
+  padding: 1em;}
+
+.portfolio__figcaption p {
+  margin: 0;
+}
+
+.portfolio__modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,.8);
+  display: none;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  z-index: 99999;
+}
+
+.portfolio__modal.is-open {
+  display: grid;
+}
+
+.about {
+  background: var(--clr-accent);
+  // transform: translateY(-10em); 
+  margin-top: -10em;
+  padding: 10em 5em 5em;
+}
+
+  </style>
+
+ <body>
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">The Team</a></li>
+    <li><a href="#">Pricing</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <h1 class="hero__title">Stacking Context</h1>
+</div>
+
+<div class="portfolio">
+  <!--  portfolio item 01  -->
+  <figure class="portfolio__item">
+    <img src="https://unsplash.it/600/400" alt="" class="portfolio__img">
+    <figcaption class="portfolio__figcaption">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button class="btn js-open-modal">See more</button>
+    </figcaption>
+    <div class="portfolio__modal">
+      <h3>Some more content would go here</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button class="btn js-close-modal">Close me</button>
+    </div>
+  </figure>
+  
+  <!--  portfolio item 02  -->
+  <figure class="portfolio__item">
+    <img src="https://unsplash.it/600/400" alt="" class="portfolio__img">
+    <figcaption class="portfolio__figcaption">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button class="btn js-open-modal">See more</button>
+    </figcaption>
+    <div class="portfolio__modal">
+      <h3>Some more content would go here</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button class="btn js-close-modal">Close me</button>
+    </div>
+  </figure>
+  
+  <!--  portfolio item 03  -->
+  <figure class="portfolio__item">
+    <img src="https://unsplash.it/600/400" alt="" class="portfolio__img">
+    <figcaption class="portfolio__figcaption">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button class="btn js-open-modal">See more</button>
+    </figcaption>
+    <div class="portfolio__modal">
+      <h3>Some more content would go here</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button class="btn js-close-modal">Close me</button>
+    </div>
+  </figure>
+  
+  <!--  portfolio item 04  -->
+  <figure class="portfolio__item">
+    <img src="https://unsplash.it/600/400" alt="" class="portfolio__img">
+    <figcaption class="portfolio__figcaption">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button class="btn js-open-modal">See more</button>
+    </figcaption>
+    <div class="portfolio__modal">
+      <h3>Some more content would go here</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button class="btn js-close-modal">Close me</button>
+    </div>
+  </figure>
+  
+  <!--  portfolio item 05  -->
+  <figure class="portfolio__item">
+    <img src="https://unsplash.it/600/400" alt="" class="portfolio__img">
+    <figcaption class="portfolio__figcaption">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button class="btn js-open-modal">See more</button>
+    </figcaption>
+    <div class="portfolio__modal">
+      <h3>Some more content would go here</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button class="btn js-close-modal">Close me</button>
+    </div>
+  </figure>
+  
+  <!--  portfolio item 06  -->
+  <figure class="portfolio__item">
+    <img src="https://unsplash.it/600/400" alt="" class="portfolio__img">
+    <figcaption class="portfolio__figcaption">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button class="btn js-open-modal">See more</button>
+    </figcaption>
+    <div class="portfolio__modal">
+      <h3>Some more content would go here</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button class="btn js-close-modal">Close me</button>
+    </div>
+  </figure>
+</div>
+
+
+<div class="about">
+  <h2>About us</h2>
+  <p> Nam ullamcorper sapien eu accumsan bibendum. Quisque ultrices leo in auctor mollis. Sed finibus vulputate fermentum. Pellentesque quis lectus ullamcorper, imperdiet lacus eu, fringilla ex. Quisque suscipit nibh laoreet ante ultrices, at consectetur quam fringilla. Aenean facilisis, lectus euismod blandit accumsan, leo quam fermentum ante, quis finibus leo purus sed tortor. Phasellus ultrices rhoncus aliquam. Morbi vestibulum nulla metus, non condimentum elit ultrices ut. Etiam sodales gravida diam, nec vehicula felis commodo nec. Quisque finibus quam eget varius tempus. Etiam eu facilisis nulla, sed placerat dolor. Nulla facilisi. </p>
+</div>
+
+</body>
+</html>

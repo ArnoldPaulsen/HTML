@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle Registration</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Register a Vehicle</h1>
+      <form id="vehicleForm">
+        <label for="make">Make:</label>
+        <input type="text" id="make" name="make" required />
+
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" required />
+
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" required />
+
+        <label for="type">Type:</label>
+        <select id="type" name="type" required>
+          <option value="sedan">Sedan</option>
+          <option value="suv">SUV</option>
+          <option value="truck">Truck</option>
+          <option value="motorcycle">Motorcycle</option>
+        </select>
+
+        <button type="submit">Add Vehicle</button>
+      </form>
+
+      <button onclick="getTotalVehicles()">Show Total Vehicles</button>
+      <button onclick="getAverageYear()">Show Average Year</button>
+      <button onclick="calculateTotalVehiclesByType()">Show Total Vehicles by Type</button>
+
+      <p id="totalVehicles"></p>
+      <p id="averageYear"></p>
+      <p id="totalYearByType"></p>
+
+      <div id="result"></div>
+    </div>
+    
+    <script src="functions.js"></script>
+  </body>
+</html>

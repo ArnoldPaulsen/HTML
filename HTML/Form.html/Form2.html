@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="Form2.css">
+<head>
+
+ 
+    <title>Form2</title>
+</head>
+<body>
+    <form>
+        <fieldset id="step 1">
+            <legend>
+                Step 1: Custormer Detail
+            </legend>
+            <ol>
+                <li>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Arnold" required="required"/>
+                </li>
+                <li>
+                    <label for="surname">Surname</label>
+                    <input type="text" name="surname" id="surname" placeholder="Paulsen" required="required"/>
+
+                </li>
+                <li>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="user@gmail.com" required="required"/>
+                </li>
+                <li>
+                    <label for="driver">Driver Experiance</label>
+                    <input type="range" name="driver" id="driver" 
+                                step="1" value="value"
+                                min="0" max="4000"/>
+                </li>
+                 
+                <li>
+                    <label for="carDetails">Car Details</label>
+                    <textarea></textarea>
+                </li>
+
+                <li>
+                    <label for="hours">Estimated Driving Hours</label>
+                    <input type="number" name="hours" id="hours"
+                                min="0" max="4000"/>
+                        
+                </li>
+
+                <li>
+                    <label for="start_date">Start date</label>
+                    <input type="date" name="start_date" id="start_date" />
+                </li>
+                <li>
+                    <label for="feature">Inmportant Feature</label>
+                    <select name="feature" size="3" multiple="multiple">
+                        <option value="tires">Tires</option>
+                        <option value="seats">Seats</option>
+                        <option value="sunroof">Sunroof</option>
+                    </select>
+                </l>
+                <li>
+                    <label for="feature">Inmportant Feature</label>
+                    <select name="feature" >
+                        <option value="type1">Tires</option>
+                        <option value="type2">Seats</option>
+                        <option value="type3" selected>Sunroof</option>
+                    </select>
+                </li>
+            </ol>
+
+        </fieldset>
+
+        <fieldset id="step2">
+            <legend>Step 2: Car Preference</legend>
+
+            <label for="carOption">SUV</label>
+            <input type="radio" name="car" id="suvOption"/>
+
+            <label for="carOption">Coupe</label>
+            <input type="radio" name="car" id="coupeOption" checked="checked"/>
+
+            <br>
+            <label for="color">Car Colour</label>
+            <input type="color" name="color" id="color" />
+
+            <br>
+            <input type="submit" value="Submit"/>
+            <input type="reset" value="Cancel"/>
+            
+
+        </fieldset>
+        
+
+    </form>
+    
+</body>
+</html>

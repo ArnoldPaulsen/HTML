@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+      
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 2rem auto;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+       
+    </style>
+     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+
+
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <a href="BelgiumCampusiTversity.html">
+                <img src="Belgium Logo.jpeg" alt="Belgium Campus iTversity Logo">
+            </a>        
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="BelgiumCampusiTversity.html">Home</a></li>
+                    <li><a href="ourstory.html">Our Story</a></li>
+                    <li><a href="Coursedetails.html">Course Details </a></li>
+                    <li><a href="ccourses.html">Course Modules</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                  
+                </ul>
+            </nav>
+        </div>
+        <nav class="sub-nav">
+            <ul>
+                <li><a href="campus.html">Campus</a></li>
+                <li><a href="#team">Our Team</a></li>
+              </ul>
+        </nav>
+       
+    </header>
+    <div class="water-cursor" id="waterCursor"></div>
+
+    <main id="root">
+        <!-- React app will be rendered here -->
+    </main>
+    <div class="course-list">
+        <h2>Course Details</h2>
+        <ul>
+            <li><a href="#" class="course-link" data-course="0">Higher Certificate</a></li>
+            <li><a href="#" class="course-link" data-course="1">Diploma</a></li>
+            <li><a href="#" class="course-link" data-course="2">BIT</a></li>
+            <li><a href="#" class="course-link" data-course="3">BCOM</a></li>
+        </ul>
+    </div>
+
+    <div class="course-details" id="course-details">
+        <h2 id="course-title"></h2>
+        <table id="details-table"></table>
+    </div>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>42 Long St, Kempton Park, Johannesburg</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@belgiumcampus.ac.za</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="BelgiumCampusiTversity.html">Home</a></li>
+                    <li><a href="ourstory.html">Our Story</a></li>
+                    <li><a href="Coursedetails.html">Course Details </a></li>
+                    <li><a href="ccourses.html">Course Modules</a></li>
+                    <li><a href="#footer">Contact Us</a></li>>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="fab fa-facebook"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Belgium Campus iTversity. All rights reserved.</p>
+        </div>
+    </footer>
+
+   
+    <script>
+        const courses = [
+            {
+                title: 'Higher Certificate',
+                courseOverview: "A Higher Certificate in Information Technology is a one year programme that provides a structured programme for persons wishing to work as information technology support staff in public and private sector organisations. The qualification aims to develop an integrated conceptual understanding, synthesis and application of information technology principles. It will also develop communication and project management skills, and provide students with skills in information technology support.",
+                modules: [
+                    '<li><a href="Computer_Hardware_.pdf">Computer Hardware</a> / <a href="https://www.youtube.com/watch?v=d86ws7mQYIg">Video Link</a></li>',
+                    '<li><a href="A_Complete_Web_Development_Guide_For_Non_Technical_Startup_Founder.pdf">Web Development</a> / <a href="https://youtu.be/ysEN5RaKOlA?si=C9SDTcKzklWg-N_t">Video Link</a></li>',
+                    '<li><a href="Introduction to Programming.pdf">Introduction to Programming</a> / <a href="https://youtu.be/zOjov-2OZ0E?si=mdg7yruiZJ1FJVRT">Video Link</a></li>'
+                ],
+                lecturers: ['Mr S Zengeni', 'Miss M. Magorimbo'],
+                venues: ['Alpha', 'Omega']
+            },
+            {
+                title: 'Diploma',
+                courseOverview: "Our Diploma in Information Technology consists of a generic foundation phase and a specialisation phase. The foundation phase gives insight into the field of information technology, while the specialisation phase is career oriented. This academic programme will transform you into a well-rounded professional through a strong focus on knowledge, execution, and professional and practical skills. You will also have the incredible opportunity to complete 6 months of in-service training at an external company or in a simulated work environment.",
+                modules: [
+                    '<li><a href="Business-Communication-161-BUC161.pdf">Business Communication</a> / <a href="https://youtu.be/WESGDi_ajUU?si=3V3HmTGhMQQ3o0vG">Video Link</a></li>',
+                    '<li><a href="Computer-Architecture-161-COA161.pdf">Computer Architecture</a> / <a href="https://youtu.be/dV_lf1kyV9M?si=qsJdYPiCgjZRba-c">Video Link</a></li>',
+                    '<li><a href="Internet-of-Things-161-IOT161.pdf">Internet of Things</a> / <a href="https://youtu.be/6mBO2vqLv38?si=g_GUhwbrVO7ZNjvH">Video Link</a></li>'
+                ],
+                lecturers: ['Mr M. Combrinck', 'Mr R Hood'],
+                venues: ['Gamma', 'Delta']
+            },
+            {
+                title: 'BIT',
+                courseOverview: "This IT degree focuses on information systems modules and will provide you with foundational knowledge in software engineering and business intelligence. You will cover an extensive range of topics, from mobile and wireless networks to artificial intelligence and intelligent systems.",
+                modules: [
+                    '<li><a href="DBD1781 Study Guide.pdf">Database Development</a> / <a href="https://youtu.be/wR0jg0eQsZA?si=6pWZP7kN9CUWvUK2">Video Link</a></li>',
+                    '<li><a href="English-Communication-171-ENG171.pdf">English Communication</a> / <a href="https://youtu.be/fm6PtyM4qMw?si=uFHaOIsrlxLpCk3R">Video Link</a></li>',
+                    '<li><a href="WPR 271 Study Guide [2024] v1.4.pdf">Web Programming</a> / <a href="https://youtu.be/qz0aGYrrlhU?si=7lu7X0GZSOKErV-P">Video Link</a></li>'
+                ],
+                lecturers: ['Mr P. Moila', 'Mr T. Mkwaira'],
+                venues: ['Phi', 'Ypsilon']
+            },
+            {
+                title: 'BCOM',
+                courseOverview: "You will gain sound theoretical knowledge grounded in real-world applications. Furthermore, the practical assignments and projects you will complete are congruent with daily practices in the working world, providing you with business-specific and soft skills. These skills include communication skills, customer satisfaction training, the ability to work as part of a team, and the ability to teach others",
+                modules: [
+                    '<li><a href="Study Guide LPR181 171.pdf">Linear Programming</a> / <a href="https://youtu.be/Bzzqx1F23a8?si=GkypiH1-T9zCHbZl">Video Link</a></li>',
+                    '<li><a href="Statistics-181-STA181.pdf">Statistics</a> / <a href="https://youtu.be/XZo4xyJXCak?si=zAdQwF96CPc3ZDUA">Video Link</a></li>',
+                    '<li><a href="Programming-181-PRG181.pdf">Programming</a> / <a href="https://youtu.be/bJzb-RuUcMU?si=33_tDXSThAwBoQBp">Video Link</a></li>'
+                ],
+                lecturers: ['Mrs E Shayamano', 'Ms A Mundackal'],
+                venues: ['Chi', 'Phi']
+            }
+        ];
+
+        document.querySelectorAll('.course-link').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const courseIndex = this.getAttribute('data-course');
+                showCourseDetails(courseIndex);
+            });
+        });
+
+        function showCourseDetails(courseIndex) {
+            const course = courses[courseIndex];
+            const table = document.getElementById('details-table');
+            table.innerHTML = `
+                <tr><th>Title</th><td>${course.title}</td></tr>
+                <tr><th>Course Overview</th><td>${course.courseOverview}</td></tr>
+                <tr><th>Modules</th><td><ul>${course.modules.join('')}</ul></td></tr>
+                <tr><th>Lecturers</th><td><ul>${course.lecturers.map(lecturer => `<li>${lecturer}</li>`).join('')}</ul></td></tr>
+                <tr><th>Venues</th><td><ul>${course.venues.map(venue => `<li>${venue}</li>`).join('')}</ul></td></tr>
+            `;
+            document.getElementById('course-details').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
